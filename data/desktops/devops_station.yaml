@@ -1,0 +1,50 @@
+---
+tp::osfamily_install_hash_merge_behaviour: deep
+tp::osfamily_install_hash:
+  RedHat:
+    - docker
+    - code
+    - pdk
+    - git
+    - terraform
+    - azure-cli
+    - packer
+  Debian:
+    docker: {}
+    code:
+      settings_hash:
+        package_provider: snap
+    pdk: {}
+    git: {}
+    terraform: {}
+    azure-cli: {}
+    packer: {}
+  windows:
+    chocolateygui: {}
+    docker-desktop: {}
+  #  git: {}
+    powertoys: {}
+  #  microsoft-windows-terminal: {}
+    MobaXTerm: {}
+  #  pdk: {}
+    Sysinternals: {}
+  #  vscode: {}
+    PowerBi: {}
+  Darwin:
+#    - docker
+    - pdk
+    - iterm2
+    - pe-client-tools
+    - visual-studio-code
+#  -  git
+    - terraform
+    - azure-cli
+    - packer
+
+tp::osfamily_install_defaults:
+  windows:
+    settings_hash:
+      package_provider: chocolatey
+  Darwin:
+    auto_prereq: true
+

@@ -1,0 +1,42 @@
+---
+
+tp::osfamily_install_hash_merge_behaviour: deep
+tp::osfamily_install_hash:
+  RedHat:
+    - docker
+    - code
+    - pdk
+    - git
+  Debian:
+    docker: {}
+    code:
+      settings_hash:
+        package_provider: snap
+    pdk: {}
+    git: {}
+  windows:
+    1password: {}
+    BlueJeansApp: {}
+  #  citrix-workspace: {}
+    dropbox: {}
+    Firefox: {}
+    GoogleChrome: {}
+    opera: {}
+    webex-meetings: {}
+    zoom: {}
+  Darwin:
+#    - 1password
+    - firefox
+    - google-chrome
+    - libreoffice
+    - opera
+    - webex-meetings
+#   - citrix-workspace
+    - zoom
+
+tp::osfamily_install_defaults:
+  windows:
+    settings_hash:
+      package_provider: chocolatey
+  Darwin:
+    auto_prereq: true

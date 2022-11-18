@@ -1,0 +1,4 @@
+---
+
+# In a Desktop environment we don't want to purge unmanaged /etc/tp files
+tp::purge_dirs: false

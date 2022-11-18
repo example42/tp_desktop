@@ -1,0 +1,24 @@
+---
+tp::osfamily_install_hash_merge_behaviour: deep
+tp::osfamily_install_hash:
+  RedHat:
+    - obs-studio
+  Debian:
+    - obs-studio
+  windows:
+    - discord
+    - obs-studio
+    - spotify
+    - Steam
+  ##  twitch: {}
+  Darwin:
+    - streamlabs-obs
+    - opera
+    - spotify
+
+tp::osfamily_install_defaults:
+  windows:
+    settings_hash:
+      package_provider: chocolatey
+  Darwin:
+    auto_prereq: true

@@ -1,0 +1,13 @@
+---
+version: 5
+
+defaults:
+  datadir: data
+  data_hash: yaml_data
+
+hierarchy:
+  - name: "Hiera basic hierarchy"
+    paths:
+      - "desktops/%{networking.hostname}.yaml"
+      - "default.yaml"
+
