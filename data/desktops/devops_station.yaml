@@ -1,5 +1,4 @@
 ---
-tp::osfamily_install_hash_merge_behaviour: deep
 tp::osfamily_install_hash:
   RedHat:
     - docker
@@ -41,10 +40,5 @@ tp::osfamily_install_hash:
     - azure-cli
     - packer
 
-tp::osfamily_install_defaults:
-  windows:
-    settings_hash:
-      package_provider: chocolatey
-  Darwin:
-    auto_prereq: true
+
 

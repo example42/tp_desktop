@@ -1,6 +1,4 @@
 ---
-
-tp::osfamily_install_hash_merge_behaviour: deep
 tp::osfamily_install_hash:
   RedHat:
     - docker
@@ -15,15 +13,15 @@ tp::osfamily_install_hash:
     pdk: {}
     git: {}
   windows:
-    1password: {}
-    BlueJeansApp: {}
-  #  citrix-workspace: {}
-    dropbox: {}
-    Firefox: {}
-    GoogleChrome: {}
-    opera: {}
-    webex-meetings: {}
-    zoom: {}
+    - 1password
+    - firefox
+    - google-chrome
+    - libreoffice
+    - opera
+    - webex-meetings
+    - zoom
+    - BlueJeansApp
+    - dropbox
   Darwin:
 #    - 1password
     - firefox
@@ -34,9 +32,3 @@ tp::osfamily_install_hash:
 #   - citrix-workspace
     - zoom
 
-tp::osfamily_install_defaults:
-  windows:
-    settings_hash:
-      package_provider: chocolatey
-  Darwin:
-    auto_prereq: true
