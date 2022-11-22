@@ -8,41 +8,6 @@ Do you want to have the same configuration on your laptop and desktop and whatev
 
 tp desktop is also for you.
 
-## Who can use tp desktop? What version of tp desktop should I use?
-
-tp desktop comes in two flavors, the base one, this repository, is recommended for:
-
-- **Every computer user**, who is smart enough to consider how useful can be to have a simple file where to specify the applications wanted on every own Windows / Linux / MacOs computer. Check the README for BEGINNERS to learn the basics.
-
-- **Power Users**, who may have different computers and the need to automate the installation and configurations set of applications for different use cases on different OS. README for JUNIORS for details.
-
-Read the Installation docs and, when initialising new tp desktop just run:
-
-```bash
-tp desktop init
-```
-
-A more complex version, which more advanced features like configuration, git sources management and secrets encryption is a must for:
-
-- **Developers**, **Cloud**, **DevOps**, **Data** engineers, who can quickly configure in Yaml files the configurations needed to setup their working stations: not limited to packages installations but also configurations of home dir files, applications configurations, credentials (with the possibility to encrypt sensitive data), cloning of repositories and so on... README for INTERMEDIATE to learn more.
-
-Initialise a new tp desktop with:
-
-```bash
-tp desktop init advanced
-```
-
-Who has to manage servers for work can consider using PSICK (Puppet Systems Infraatructure Construction Kit), which is a full featured Puppet control-repo, intended for production environments with at least 50-100 nodes.
-
-- **Infrastructure Developers** (we used to call ourselves **Sysadmins**) who can use this as a gentle introduction to an opinionated Puppet setup and a starting point of a full featured and modern Puppet control repository. Under the hoods, tp desktop is a minimized control-repo which can evolve in a real production use one. For usage of Puppet to manage a whole multi OS servers infrastructure give a look to PSICK (Puppet Infrastructure Construction Kit). More in the 
-ADVANCED README (requires some Puppet background).
-
-Initialise a new tp desktop with the full look of a Puppet control-repo:
-
-```bash
-```bash
-tp desktop init psick
-```
 
 ## Installation
 
@@ -87,6 +52,43 @@ sudo tp desktop apply <desktop_name>
 # you need superuser powers to install the packages in the desktop config selected
 ```
 
+## Who can use tp desktop? What version of tp desktop should I use?
+
+tp desktop comes in two flavors, the base one, this repository, is recommended for:
+
+- **Every computer user**, who is smart enough to consider how useful can be to have a simple file where to specify the applications wanted on every own Windows / Linux / MacOs computer. Check the README for BEGINNERS to learn the basics.
+
+- **Power Users**, who may have different computers and the need to automate the installation and configurations set of applications for different use cases on different OS. README for JUNIORS for details.
+
+This repo is what you use when running:
+
+```bash
+tp desktop init
+```
+
+A more complex version, which more advanced features like configuration, git sources management and secrets encryption is a must for:
+
+- **Developers**, **Cloud**, **DevOps**, **Data** engineers, who can quickly configure in Yaml files the configurations needed to setup their working stations: not limited to packages installations but also configurations of home dir files, applications configurations, credentials (with the possibility to encrypt sensitive data), cloning of repositories and so on... README for INTERMEDIATE to learn more.
+
+Initialise a new tp desktop based on a more advanced template with:
+
+```bash
+tp desktop init advanced
+```
+
+Who has to manage servers for work can consider using PSICK (Puppet Systems Infraatructure Construction Kit), which is a full featured Puppet control-repo, intended for production environments with at least 50-100 nodes.
+
+- **Infrastructure Developers** (we used to call ourselves **Sysadmins**) who can use this as a gentle introduction to an opinionated Puppet setup and a starting point of a full featured and modern Puppet control repository. Under the hoods, tp desktop is a minimized control-repo which can evolve in a real production use one. For usage of Puppet to manage a whole multi OS servers infrastructure give a look to PSICK (Puppet Infrastructure Construction Kit). More in the 
+ADVANCED README (requires some Puppet background).
+
+Initialise a new tp desktop with the full look of a Puppet control-repo (note that additional operations are needed to fully setup it, refer to the documentations.):
+
+```bash
+tp desktop init psick
+```
+
+Unless you are a Puppet expert, you should start with the tp desktop base version and then move to the advanced one. Psick for desktop management is overkill, but gives more flexibility and is suitable to manage full servers fleets
+.
 
 ## Managing your own tp-desktop repository
 
@@ -128,6 +130,10 @@ git push -u origin mybranch
 ```
 
 ## In case of errors
+
+You will see them, most of them can be solved in a few seconds by who knows what's under the hoods (Puppet, the tp module and its tinydata).
+
+Raise an issue on GitHub or contact Alessandro Franceschi on Twitter @alvagante, via WhatsApp (check [example42.com](https://example42.com) for details) or directly via a ticket here on GitHub.
 
 Please be aware that as of November 2022, tp-desktop is still in alpha and may not work as expected.
 
