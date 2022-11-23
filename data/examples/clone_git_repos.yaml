@@ -1,0 +1,17 @@
+---
+# Change your home accordingly
+tp::dir_hash:
+  /home/al/sources/tinydata:
+    vcsrepo: git
+    source: https://github.com/example42/tinydata
+  /home/al/sources/tp:
+    vcsrepo: git
+    source: https://github.com/example42/puppet-tp
+  /home/al/sources/tp-desktop:
+    vcsrepo: git
+    source: https://github.com/example42/tp-desktop
+  /home/al/sources/tp-desktop-advanced:
+    vcsrepo: git
+    source: https://github.com/example42/tp-desktop-advanced
+    
+  

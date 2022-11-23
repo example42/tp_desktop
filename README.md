@@ -28,6 +28,7 @@ tp desktop init
 Once created a new tp desktop, you can use it to install and configure your applications and settings on your computer(s). Enter the tp desktop directory and run the basic commands:
 
 ```bash
+# The other tp desktop commands must be run from the tp desktop directory (the one created with tp desktop init) 
 cd tp_desktop
 
 # See the available sample desktops configurations
@@ -41,12 +42,16 @@ vi data/desktops/<hostname>.yaml
 
 # Apply the desktop config matching your hostname as found in data/desktops/<hostname>.yaml
 # NOTE: This will install the packages and configure the settings you specified in the desktop config.
+# If For this
 sudo tp desktop apply
 
 # Apply the configs in data/desktops/<desktop_name>.yaml
 sudo tp desktop apply <desktop_name>
 
-# 
+# Under the examples directory you can find sample configurations to adapt and use in your
+# own desktop files. 
+
+
 # Test the sample ones. Comment out the apps you don't want to try install
 # Note that tp desktop apply does changes on your system based on the Yaml files under data/.
 # you need superuser powers to install the packages in the desktop config selected
@@ -137,7 +142,7 @@ Raise an issue on GitHub or contact Alessandro Franceschi on Twitter @alvagante,
 
 Please be aware that as of November 2022, tp-desktop is still in alpha and may not work as expected.
 
-Windows tp command line is not supported yet, (but you can manage Windows apps with tp code ad the apply.ps1 script).
+Windows tp command line is not supported yet, (but you can manage Windows apps with tp code and the apply.ps1 script).
 
 Some applications you configure in your desktop file will fail to install.
 

@@ -56,8 +56,8 @@ ssl_settings: &ssl_settings
   ssl.certificate_authorities: ["/etc/puppetlabs/puppet/ssl/certs/ca.pem"]
   ssl.certificate: "/etc/puppetlabs/puppet/ssl/certs/%{clientcert}.pem"
   ssl.key: "/etc/puppetlabs/puppet/ssl_private_key_%{clientcert}.pem"
-  username: alvagante
-  password: loglikehell
+  username: yyyy
+  password: xxxx
     
 linux_tp_conf: &linux_tp_conf {}
 

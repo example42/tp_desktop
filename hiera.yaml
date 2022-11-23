@@ -8,6 +8,6 @@ defaults:
 hierarchy:
   - name: "Hiera basic hierarchy"
     paths:
-      - "desktops/%{networking.hostname}.yaml"
+      - "desktops/%{facts.hostname}.yaml"
       - "default.yaml"
 

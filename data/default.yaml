@@ -1,13 +1,12 @@
 ---
-# Here are the default settings, by are applied to all desktops
+# Here are the default settings, which are applied to all desktops
+# Configure here only resources you want on all your desktops
 
-# In a Desktop environment we don't want to purge unmanaged /etc/tp files
-tp::purge_dirs: false
 
-# When looking for the tp::osfamily_install_hash values, use Hiera's deep merge method. 
-tp::osfamily_install_hash_merge_behaviour: deep
 
-# Default settings for different OS families
+# Default settings for installations on different OS families
+# On Windows here we require chocolatey to be installed
+# On Darwin we require homebrew to be installed
 tp::osfamily_install_defaults:
   windows:
     settings_hash:
