@@ -8,9 +8,6 @@
 # CHANGE these files according to your needs
 
 tp::dir_hash:
-  my_home:
-    recurse: true
-    path: '/home/al/'
+  /home/al/:
     source: 'puppet:///modules/mydata/home'
-    purge: true
 

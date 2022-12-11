@@ -38,7 +38,7 @@ tp desktop list
 tp desktop show <desktop_name>
 
 # Create a new desktop configuration:
-vi data/desktops/<hostname>.yaml
+vi data/desktops/<desktop_name>.yaml
 
 # Simulate what an apply action would do:
 tp desktop preview [desktop_name]
