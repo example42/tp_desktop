@@ -1,0 +1,8 @@
+# Disable ssl certificate verification for https requests
+#[http]
+# 	sslVerify = false
+
+# User name and email for git commits
+#[user]
+#   name = Name Surname
+#   email = user@example.com

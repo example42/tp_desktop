@@ -11,7 +11,7 @@ tp desktop is also for you.
 
 ## Installation
 
-- Install Puppet
+- Install Puppet (quick oneliner: `wget -O - https://bit.ly/installpuppet | sudo bash`)
 - Install Git
 - Install and use tp desktop as follows:
 
@@ -40,22 +40,38 @@ tp desktop show <desktop_name>
 # Create a new desktop configuration:
 vi data/desktops/<hostname>.yaml
 
-# Apply the desktop config matching your hostname as found in data/desktops/<hostname>.yaml
-# NOTE: This will install the packages and configure the settings you specified in the desktop config.
-# If For this
-sudo tp desktop apply
+# Simulate what an apply action would do:
+tp desktop preview [desktop_name]
 
-# Apply the configs in data/desktops/<desktop_name>.yaml
+# Apply the desktop desktop matching your hostname as found in data/desktops/<hostname>.yaml
+# Note, if run by a non-root user, it may fail in applying resources that require root privileges.
+tp desktop apply
+
+# You can apply any configuration yaml file as present in data/desktops/<desktop_name>.yaml
+tp desktop apply <desktop_name>
+
+# To apply a desktop configuration as root (NOTE: Packages may be installed and global configuration files may be modified):
 sudo tp desktop apply <desktop_name>
+```
 
-# Under the examples directory you can find sample configurations to adapt and use in your
-# own desktop files. 
+To add a new desktop, edit the data/desktops/<hostname>.yaml file and add there the configurations you want.
 
+In common usage you can manage desktops files in various ways:
 
-# Test the sample ones. Comment out the apps you don't want to try install
+- Have one file for each desktop. Where as desktop we mean your user setup in your Desktop, Laptop, shell on a remote system or any setup related to a single sistem
+
+- Have different desktop files with different block of configurations to apply according to your needs on one or more systems. These "desktop" files may contain for example: setup of your home files on Linux, MacOS and Windows systems, setup of specific git/ssh/shell... environment
+
+ It's your choice if to have a single desktop file for each desktop or client machine you want to configure or have different desktop files.
+
+ different operating systems, but you can also have a single file for all the operating systems you use.
+ new desktop name to the desktops array.
+Under the examples directory you can find sample configurations to adapt and use in your own desktop files. 
+
+To add 
+Adapt the sample ones and create new desktop yaml files under Test the sample ones. Comment out the apps you don't want to try install
 # Note that tp desktop apply does changes on your system based on the Yaml files under data/.
 # you need superuser powers to install the packages in the desktop config selected
-```
 
 ## Who can use tp desktop? What version of tp desktop should I use?
 

@@ -1,0 +1,16 @@
+---
+
+# This is a simple example of how to use the dir_hash type to manage
+# the content of a user home directory. The target path is the user's
+# home directory (CHANGE IT!) and the source is from the mydata module
+# under the site directory. All the files present under site/mydata/files/home
+# a recursively copied to the specified path.
+# CHANGE these files according to your needs
+
+tp::dir_hash:
+  my_home:
+    recurse: true
+    path: '/home/al/'
+    source: 'puppet:///modules/mydata/home'
+    purge: true
+
