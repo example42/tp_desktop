@@ -1,15 +1,6 @@
 ---
 # Here are the default settings, which are applied to all desktops
-# Configure here only resources you want on all your desktops
+# Configure here only resources you want every time you run tp desktop apply
 
 
 
-# Default settings for installations on different OS families
-# On Windows here we require chocolatey to be installed
-# On Darwin we require homebrew to be installed
-tp::osfamily_install_defaults:
-  windows:
-    settings_hash:
-      package_provider: chocolatey
-  Darwin:
-    auto_prereq: true

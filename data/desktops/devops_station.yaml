@@ -1,5 +1,5 @@
 ---
-tp::install_hash:
+tp::installs:
   - docker
   - code
   - pdk

@@ -1,6 +1,6 @@
 ---
 # Change your home accordingly
-tp::dir_hash:
+tp::dirs:
   /home/al/sources/tinydata:
     vcsrepo: git
     source: https://github.com/example42/tinydata

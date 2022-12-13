@@ -7,7 +7,7 @@
 # a recursively copied to the specified path.
 # CHANGE these files according to your needs
 
-tp::dir_hash:
-  /home/al/:
+tp::dirs:
+  /home/myuser/:
     source: 'puppet:///modules/mydata/home'
-
+    recurse: remote

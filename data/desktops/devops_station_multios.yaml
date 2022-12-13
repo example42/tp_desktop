@@ -1,44 +1,10 @@
 ---
-tp::osfamily_install_hash:
-  RedHat:
-    - docker
-    - code
-    - pdk
-    - git
-    - terraform
-    - azure-cli
-    - packer
-  Debian:
-    docker: {}
-    code:
-      settings_hash:
-        package_provider: snap
-    pdk: {}
-    git: {}
-    terraform: {}
-    azure-cli: {}
-    packer: {}
-  windows:
-    chocolateygui: {}
-    docker-desktop: {}
-  #  git: {}
-    powertoys: {}
-  #  microsoft-windows-terminal: {}
-    MobaXTerm: {}
-  #  pdk: {}
-    Sysinternals: {}
-  #  vscode: {}
-    PowerBi: {}
-  Darwin:
-#    - docker
-    - pdk
-    - iterm2
-    - pe-client-tools
-    - visual-studio-code
-#  -  git
-    - terraform
-    - azure-cli
-    - packer
-
-
-
+tp::installs:
+  - docker
+  - code
+  - pdk
+  - git
+  - terraform
+  - azure-cli
+  - packer
+  - vagrant
