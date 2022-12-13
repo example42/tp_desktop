@@ -12,5 +12,4 @@ tp::osfamily_install_hash:
   ##  twitch: {}
   Darwin:
     - streamlabs-obs
-    - opera
-    - spotify
+

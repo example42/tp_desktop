@@ -1,8 +1,7 @@
 ---
 tp::installs:
   - docker
-  - code
-  - pdk
+  - vscode
   - git
   - terraform
   - azure-cli
