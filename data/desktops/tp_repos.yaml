@@ -1,0 +1,13 @@
+---
+tp::dirs:
+  /var/tmp/tinydata:
+    vcsrepo: git
+    source: https://github.com/example42/tinydata
+  /var/tmp/tp:
+    vcsrepo: git
+    source: https://github.com/example42/puppet-tp
+  /var/tmp/tp_desktop:
+    vcsrepo: git
+    source: https://github.com/example42/tp_desktop
+    
+  

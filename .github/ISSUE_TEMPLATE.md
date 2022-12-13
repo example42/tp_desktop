@@ -9,7 +9,7 @@ Please use the following labels:
 
 *   **unsupported app** for any request on support on new applications
 *   **question** for any error you find, doubt or clarification request
-* . **bug** if you think there's a but in tp-desktop
+* . **bug** if you think there's a but in tp_desktop
 
 
 # Context
@@ -17,5 +17,5 @@ Please use the following labels:
 Please provide any info useful for troubleshooting, like:
 
 1.  The OS you are using (you can use the output of the command `facter os`)
-2.  The version of tp-desktop (from the tp_desktop dir you can run `git log -2`)
+2.  The version of tp_desktop (from the tp_desktop dir you can run `git log -2`)
 3.  The commands failing or any useful information

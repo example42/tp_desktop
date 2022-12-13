@@ -1,0 +1,8 @@
+---
+tp::installs:
+  - vscode
+  - libreoffice
+  - firefox
+  - webex-meetings
+  - zoom
+

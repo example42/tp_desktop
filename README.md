@@ -109,9 +109,9 @@ tp desktop init psick
 
 Unless you are a Puppet expert, you should start with the tp desktop base version and then move to the advanced one. Psick for desktop management is overkill, but gives more flexibility and is suitable to manage full servers fleets.
 
-## Managing your own tp-desktop repository
+## Managing your own tp_desktop repository
 
-To save your changes in your local tp-desktop files, you have to use git and create your own repository, and you need a place, like GitHub, GitLab, BitBucket or any other git reposirory where to store your version of tp desktop.
+To save your changes in your local tp_desktop files, you have to use git and create your own repository, and you need a place, like GitHub, GitLab, BitBucket or any other git reposirory where to store your version of tp desktop.
 
 If you are new to git, as in any case, you can start with the following commands:
 
@@ -121,18 +121,18 @@ If you are new to git, as in any case, you can start with the following commands
 git status
 
 # If you are in the master branch and there are no uncommitted changes
-# You csn ensure your local copy of tp-desktop is updated with latest on gitlab
+# You can ensure your local copy of tp_desktop is updated with latest on gitlab
 git pull
 
-# Show the origin of your tp-desktop git repository
+# Show the origin of your tp_desktop git repository
 # Check if it's set to the default one created with tp desktop init or your own
 git remote -v
-origin	https://github.com/example42/tp-desktop.git (fetch)
-origin	https://github.com/example42/tp-desktop.git (push)
+origin	https://github.com/example42/tp_desktop.git (fetch)
+origin	https://github.com/example42/tp_desktop.git (push)
 
-# If you want to preserve your changes you have to use your own version of tp-desktop repository
+# If you want to preserve your changes you have to use your own version of tp_desktop repository
 # set it as follows. Point to an URL you can push to, for example:
-git remote set-url origin git@github.com/YOURNAME/tp-desktop
+git remote set-url origin git@github.com/YOURNAME/tp_desktop
 
 # Then switch to a new branch, do your changes and commit as usual:
 git checkout -b mybranch # To create a new branch based on current one and switch to it
@@ -154,13 +154,53 @@ You will see them, most of them can be solved in a few seconds by who knows what
 
 Read the [ERRORS.md](ERRORS.md) file to understand the errors you may encounter and, in case, raise an [issue](https://github.com/example42/tinydata/issues) on GitHub or contact Alessandro Franceschi on Twitter @alvagante, via WhatsApp (check [example42.com](https://example42.com) for details).
 
-Please be aware that as of December 2022, tp-desktop is still in beta and may not work as expected.
+Please be aware that as of December 2022, tp_desktop is still in beta and may not work as expected.
 
 Windows tp command line is not supported yet, (but you can manage Windows apps with tp code and the apply.ps1 script).
 
 Some applications you configure in your desktop file will fail to install.
 
 Probably it's just a matter of missing [tinydata](https://github.com/examople42/tinydata). Open a [ticket](https://github.com/example42/tinydata/issues) with tag **tinydata request** to request support for any application you want to install.
+
+
+## Data reference
+
+The most common keys you can use in your desktop data are:
+
+**tp::installs** - An array with the list of apps to install
+
+    tp::installs:
+      - app1
+      - app2
+
+**tp::confs** - An hash with the list of configuration files to configure. Check [tp::conf](https://github.com/example42/puppet-tp/blob/master/manifests/conf.pp) to see the available params:
+
+    tp::confs:
+
+      app:                  # Manage the main configuration of an app (if there's tinydata for the app, tp knows what's its path)
+        source: 'puppet:///modules/mydata/app/config.yaml' # Points to the file site/mydata/files/app/config.yaml
+
+      /path/to/file:                            # Specify directly the path of the file to configure
+        source: 'puppet:///modules/mydata/file' # Points to the file site/mydata/files/file
+        owner: 'root'                           # Customise the owner of the file
+        group: 'root'                           # Customise the group of the file
+        mode: '0600'                            # Customise the mode of the file
+
+**tp::dirs** - An hash with the list of full directories to configure. Check [tp::dir](https://github.com/example42/puppet-tp/blob/master/manifests/dir.pp) to see the available params:
+
+    tp::dirs:
+
+      app:                                      # Manage the main configuration dir of an app (needs tinydata for the app)
+        source: 'puppet:///modules/mydata/app/' # Points to the dir site/mydata/files/app/
+
+      /path/to/dir :                            # Specify directly the path of the dir to manage
+        source: 'puppet:///modules/mydata/dir'  # Points to the dir site/mydata/files/dir
+        recurse: 'remote'                       # Recursively copy all the files in site/mydata/files/dir to /path/to/dir
+
+      /opt/my_repo:                             # Path of the directory where to clone a git repository
+        source: https://github.com/user/repo    # The url of the gir repo to clone
+        vscrepo: 'git'                          # Tell tp that the source is a git repository
+
 
 
 ## Contributing

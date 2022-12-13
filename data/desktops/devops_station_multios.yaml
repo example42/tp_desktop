@@ -1,9 +1,0 @@
----
-tp::installs:
-  - docker
-  - vscode
-  - git
-  - terraform
-  - azure-cli
-  - packer
-  - vagrant

@@ -7,11 +7,11 @@ tp::dirs:
   /home/al/sources/tp:
     vcsrepo: git
     source: https://github.com/example42/puppet-tp
-  /home/al/sources/tp-desktop:
+  /home/al/sources/tp_desktop:
     vcsrepo: git
-    source: https://github.com/example42/tp-desktop
-  /home/al/sources/tp-desktop-advanced:
+    source: https://github.com/example42/tp_desktop
+  /home/al/sources/tp_desktop-advanced:
     vcsrepo: git
-    source: https://github.com/example42/tp-desktop-advanced
+    source: https://github.com/example42/tp_desktop-advanced
     
   
