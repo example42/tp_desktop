@@ -1,4 +1,6 @@
 ---
+# List of apps to install in a DevOps station
+# Apps not available for your OS should be ignored.
 tp::installs:
   - docker
   - vscode
@@ -6,5 +8,7 @@ tp::installs:
   - terraform
   - azure-cli
   - packer
-
+  - sysinternals
+  - powershell
+  - powertoys
 

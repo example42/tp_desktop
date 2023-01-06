@@ -114,8 +114,8 @@ This weird condition may happen on a node where puppet agent is running and is m
 
 In such a case be sure to have the tp module locally installed and setup:
 
-    sudo puppet module install example42-tp
-    sudo puppet tp setup
+    puppet module install example42-tp
+    sudo puppet tp setup --modulepath $HOME/.puppetlabs/etc/code/modules/        
 
 Another possible cause is that for some the tp module is installed but not in the modulepath of the puppet agent.
 
