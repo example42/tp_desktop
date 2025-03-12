@@ -1,27 +1,8 @@
 ---
-# tp install Hashicorp
-# Sample list of Hascicorp apps to install or remove
 tp::installs:
-  hashicorp_repo:
-    ensure: present
-  vagrant:
-    ensure: present
-  #  version: '2.3.4',
-  terraform:
-    ensure: present
-  consul:
-    ensure: present
-  vault:
-    ensure: present
-  packer:
-    ensure: present
-  nomad:
-    ensure: present
-  boundary:
-    ensure: absent
-  waypoint:
-    ensure: absent
-#  sentinel: {}
-#  otto: {}
-  serf:
-    ensure: absent
+  - vagrant
+  - terraform
+  - consul
+  - vault
+  - packer
+  - nomad
